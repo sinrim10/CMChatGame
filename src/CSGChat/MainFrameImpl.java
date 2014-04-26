@@ -66,7 +66,7 @@ public class MainFrameImpl extends JFrame implements MainFrame,PanelSize{
 		
 		main_Top_Panel.setLayout(null);
 		main_Top_Panel.setBounds(0, 0, MAIN_F_WIDTH, (int)(MAIN_F_HEIGHT*0.1));
-		main_Top_Panel.setBackground(new Color(120,5,3));
+		main_Top_Panel.setBackground(Color.GRAY);
 		
 		main_Bottom_Panel.setLayout(null);
 		main_Bottom_Panel.setBounds(0, (int)(MAIN_F_HEIGHT*0.1), MAIN_F_WIDTH, MAIN_F_HEIGHT);
