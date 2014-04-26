@@ -89,29 +89,32 @@ public class MainFrameImpl extends JFrame implements MainFrame,PanelSize{
 		
 		for (int i = 0,y=1; i < playerPanel.length; i++,y*=-1) {
 			playerPanel[i] = new PlayerPanel();
+			main_Bottom_Panel.add(playerPanel[i]);
 			playerPanel[i].initPPanel(i%2==0 ? POSITION_L_FLAG : POSITION_R_FLAG); 
+			playerPanel[i].setBounds((int)(MBOTTOM_P_WIDTH*0.05), (int)(MBOTTOM_P_HEIGHT*(i <= 1 ? 0.1 : 0.5)), PLAYER_P_WIDTH, PLAYER_P_HEIGHT);
 			if(y==-1){
+				playerPanel[i].setBounds((int)(MBOTTOM_P_WIDTH*0.7), (int)(MBOTTOM_P_HEIGHT*(i <= 1 ? 0.1 : 0.5)), PLAYER_P_WIDTH, PLAYER_P_HEIGHT);
 				//playerPanel[i].setBounds((int)(MBOTTOM_P_WIDTH*0.1), (int)(MBOTTOM_P_HEIGHT*0.1), PLAYER_P_WIDTH, PLAYER_P_HEIGHT);
 			}
 		}
-		main_Bottom_Panel.add(playerPanel[0]);
-		playerPanel[0].setBounds((int)(MBOTTOM_P_WIDTH*0.05), (int)(MBOTTOM_P_HEIGHT*0.1), PLAYER_P_WIDTH, PLAYER_P_HEIGHT);
+//		main_Bottom_Panel.add(playerPanel[0]);
+//		playerPanel[0].setBounds((int)(MBOTTOM_P_WIDTH*0.05), (int)(MBOTTOM_P_HEIGHT*0.1), PLAYER_P_WIDTH, PLAYER_P_HEIGHT);
 //		playerPanel[0].initPPanel(POSITION_L_FLAG);
 		//playerPanel.
 		/*main_Bottom_Panel.add(playerPanel);
 		playerPanel.setBounds((int)(PLAYER_P_WIDTH*0.1), (int)(PLAYER_P_WIDTH*0.1), PLAYER_P_WIDTH, PLAYER_P_HEIGHT);
 		System.out.println(playerPanel.getWidth());*/
 		
-		main_Bottom_Panel.add(playerPanel[1]);
-		playerPanel[1].setBounds((int)(MBOTTOM_P_WIDTH*0.7), (int)(MBOTTOM_P_HEIGHT*0.1), PLAYER_P_WIDTH, PLAYER_P_HEIGHT);
+//		main_Bottom_Panel.add(playerPanel[1]);
+//		playerPanel[1].setBounds((int)(MBOTTOM_P_WIDTH*0.7), (int)(MBOTTOM_P_HEIGHT*0.1), PLAYER_P_WIDTH, PLAYER_P_HEIGHT);
 //		playerPanel[1].initPPanel(POSITION_R_FLAG);
 		
-		main_Bottom_Panel.add(playerPanel[2]);
-		playerPanel[2].setBounds((int)(MBOTTOM_P_WIDTH*0.05), (int)(MBOTTOM_P_HEIGHT*0.5), PLAYER_P_WIDTH, PLAYER_P_HEIGHT);
+//		main_Bottom_Panel.add(playerPanel[2]);
+//		playerPanel[2].setBounds((int)(MBOTTOM_P_WIDTH*0.05), (int)(MBOTTOM_P_HEIGHT*0.5), PLAYER_P_WIDTH, PLAYER_P_HEIGHT);
 //		playerPanel[2].initPPanel(POSITION_L_FLAG);
 		
-		main_Bottom_Panel.add(playerPanel[3]);
-		playerPanel[3].setBounds((int)(MBOTTOM_P_WIDTH*0.7), (int)(MBOTTOM_P_HEIGHT*0.5), PLAYER_P_WIDTH, PLAYER_P_HEIGHT);
+//		main_Bottom_Panel.add(playerPanel[3]);
+//		playerPanel[3].setBounds((int)(MBOTTOM_P_WIDTH*0.7), (int)(MBOTTOM_P_HEIGHT*0.5), PLAYER_P_WIDTH, PLAYER_P_HEIGHT);
 //		playerPanel[3].initPPanel(POSITION_R_FLAG);
 	}
 
