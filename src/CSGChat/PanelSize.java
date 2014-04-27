@@ -21,4 +21,7 @@ public interface PanelSize {
 	static final int SHOW_P_WIDTH = (int) (SCREEN_S_WIDTH*0.3);
 	static final int SHOW_P_HEIGHT = (int) (SCREEN_S_HEIGHT*0.5);
 	
+	static final int POSITION_R_FLAG = 0;
+	static final int POSITION_L_FLAG = 1;
+	
 }

@@ -1,28 +1,34 @@
 package CSGChat;
 
+import java.awt.Color;
 import java.awt.GridLayout;
 
 import javax.swing.JPanel;
 
-public class PlayerPanel extends JPanel{
+public class PlayerPanel extends JPanel implements PanelSize{
 	
 	PlayerPanelInfo playerPanelInfo = null;
 	PlayerPanelImg playerPanelImg = null;
+	private JPanel p = null;
+	private int flag;
 	public PlayerPanel() {
 		// TODO Auto-generated constructor stub
 		super();
-		initPPanel();
 	}
 	
-	public void initPPanel(){
+	public void initPPanel(int flag){
+		this.setLayout(new GridLayout(1,2));
+
 		playerPanelImg = new PlayerPanelImg();
 		playerPanelInfo = new PlayerPanelInfo("sillim10");
-		
-		
-		this.setLayout(new GridLayout(1, 1));
-		this.add(playerPanelInfo);
-		this.add(playerPanelImg);
-		
+
+		if(flag == POSITION_R_FLAG){
+			this.add(playerPanelInfo);
+			this.add(playerPanelImg);
+		} else {
+			this.add(playerPanelImg);
+			this.add(playerPanelInfo);
+		}
 		
 		System.out.println("플레이패널 높이"+playerPanelInfo.getWidth());
 	}
