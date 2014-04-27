@@ -22,6 +22,7 @@ public class MainFrameImpl extends JFrame implements MainFrame,PanelSize{
 	private JPanel main_Top_Panel = null; //탑패널
 	private JPanel main_Bottom_Panel = null; //바탐패널
 	
+	private PlayerPanel playerPanel = null;
 	private Point main_Frame_point = null;
 	
 	
@@ -31,11 +32,12 @@ public class MainFrameImpl extends JFrame implements MainFrame,PanelSize{
 		main_container = getContentPane();
 		main_container.setLayout(null);
 		initGui();
+		initPanel();
         //pack();
         //this.setSize(750, 500);
 		
 		
-		
+		this.setResizable(true);
 	    this.setVisible(true);
 	}
 
@@ -69,7 +71,7 @@ public class MainFrameImpl extends JFrame implements MainFrame,PanelSize{
 		main_Top_Panel.setBackground(Color.GRAY);
 		
 		main_Bottom_Panel.setLayout(null);
-		main_Bottom_Panel.setBounds(0, (int)(MAIN_F_HEIGHT*0.1), MAIN_F_WIDTH, MAIN_F_HEIGHT);
+		main_Bottom_Panel.setBounds(0, (int)(MAIN_F_HEIGHT*0.1), MAIN_F_WIDTH, (int)(MAIN_F_HEIGHT*0.9));
 		main_Bottom_Panel.setBackground(new Color(255,5,192));
 		
 		
@@ -81,8 +83,13 @@ public class MainFrameImpl extends JFrame implements MainFrame,PanelSize{
 	@Override
 	public void initPanel() {
 		// TODO Auto-generated method stub
+		playerPanel = new PlayerPanel();
+		main_Bottom_Panel.add(playerPanel);
 		
+		playerPanel.setBounds((int)(PLAYER_P_WIDTH*0.1), (int)(PLAYER_P_WIDTH*0.1), PLAYER_P_WIDTH, PLAYER_P_HEIGHT);
+		playerPanel.setBackground(Color.BLUE);
 		
+		System.out.println(playerPanel.getWidth());
 	}
 
 }
