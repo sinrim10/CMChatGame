@@ -9,7 +9,7 @@ public interface PanelSize {
 	
 	//메인 프레임 사이즈.
 	static final int MAIN_F_WIDTH = (int) (SCREEN_S_WIDTH*0.6);
-	static final int MAIN_F_HEIGHT = (int) (SCREEN_S_HEIGHT*0.7);
+	static final int MAIN_F_HEIGHT = (int) (SCREEN_S_HEIGHT*0.8);
 	
 	//메인 바텀 패널 사이즈
 	static final int MBOTTOM_P_WIDTH = (int) (SCREEN_S_WIDTH*0.6);
@@ -23,7 +23,7 @@ public interface PanelSize {
 	static final int SHOW_P_WIDTH = (int) (SCREEN_S_WIDTH*0.3);
 	static final int SHOW_P_HEIGHT = (int) (SCREEN_S_HEIGHT*0.5);
 	
-	static final int POSITION_R_FLAG = 0;
+	static final int POSITION_R_FLAG =-1;
 	static final int POSITION_L_FLAG = 1;
 	
 }

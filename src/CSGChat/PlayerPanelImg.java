@@ -9,7 +9,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class PlayerPanelImg extends JPanel implements PanelSize{
+public class PlayerPanelImg extends JPanel implements PanelSize {
 	
 
 	private ImageIcon image1 = null;
@@ -21,7 +21,7 @@ public class PlayerPanelImg extends JPanel implements PanelSize{
 		
 	}
 	
-	public void initPPI(){
+	public void initPPI() {
 		
 		image1 = new ImageIcon("2.jpg");
 		this.setLayout(new GridLayout(1,1));
