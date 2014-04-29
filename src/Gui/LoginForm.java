@@ -15,6 +15,8 @@ import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
+import CSGChat.PanelSize;
+
 public class LoginForm extends JFrame implements PanelSize {
 	private static final long serialVersionUID = 0L;
 	
@@ -52,7 +54,7 @@ public class LoginForm extends JFrame implements PanelSize {
 		
 		loginButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("·Î±×ÀÎ ¹öÆ°");
+				System.out.println("ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½Æ°");
 			}
 		});
 		
